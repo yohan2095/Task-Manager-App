@@ -1,0 +1,38 @@
+#newTask
+{
+    width: 325px;
+    position: relative;
+    left: 40%;
+    padding: 1%;
+}
+
+#add
+{
+    background-color: khaki;
+    float: right;
+}
+
+#addBtn
+{
+    background-color: khaki;
+    float: right;
+}
+
+#cancel
+{
+    background-color: khaki;
+    float: right;
+}
+
+#addDiv
+{
+    border-style: solid;
+    border-color: black;
+    margin-top: 1%;
+    padding: 10%;
+}
+
+#postComp
+{
+    padding-top: 2%;
+}

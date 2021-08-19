@@ -1,0 +1,21 @@
+<div id="parentdiv2">
+
+    <div>
+        <span>Tasks - User {{userData.name}}</span> <input type="button" value="Add" id="addBtn" (click)="gotoAddTask()">
+    </div>
+
+    <div>
+        <app-main-task [userTasks]='userData.tasks!'></app-main-task>
+    </div>
+
+    <br>
+
+    <div>
+        <span>Posts - User {{userData.name}}</span> <input type="button" value="Add" id="addBtn" (click)="gotoAddPost()">
+    </div>
+
+    <div>
+        <app-main-post [userPosts]='userData.posts!'></app-main-post>
+    </div>
+    
+</div>

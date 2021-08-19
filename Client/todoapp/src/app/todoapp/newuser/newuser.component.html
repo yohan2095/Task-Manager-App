@@ -1,0 +1,14 @@
+<div id="position">
+Add New User
+
+<div id="addUser">
+    <form #newUserF="ngForm" (ngSubmit)="onSubmit(newUserF)">
+        Name : <input type="text" #name="ngModel" name="name" [(ngModel)]="newUser.name"> <br>
+        Email : <input type="text" #email="ngModel" name="email" [(ngModel)]="newUser.email"> <br>
+
+        <input id="cancel" type="button" value="cancel" (click)="goBack()">
+        <input id="addBtn" type="submit" value="Add">
+
+    </form>
+</div>
+</div>

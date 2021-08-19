@@ -1,0 +1,16 @@
+#taskDiv
+{
+    border-style: solid;
+    border-color: purple;
+    padding: 2%;
+}
+
+#taskComp
+{
+    padding: 2%;
+}
+#marking
+{
+    float: right;
+    background-color: khaki;
+}

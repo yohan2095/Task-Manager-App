@@ -1,0 +1,52 @@
+div
+{
+    width: 300px;
+    border-style: solid;
+    margin: auto;
+    padding: 10px;
+    padding-bottom: 30px;
+    line-height: 1.6;
+}
+
+#invisiblediv
+{
+    border-color: transparent;
+    width: 300px;
+    margin: auto;
+    padding: 10px;
+    padding-bottom: 30px;
+    border-style: solid;
+}
+
+#yellowbutton
+{
+    background-color: khaki;
+    margin: 3px;
+    float: right;
+}
+
+
+.green
+{
+    background-color: orange;
+}
+
+.red
+{
+    background-color: white;
+}
+
+#otherData
+{
+    border-radius: 8%;
+    border: 2px;
+    width: 270px;
+    border-style: solid;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: whitesmoke;
+    padding: 10px;
+    line-height: 1.6;
+}
+

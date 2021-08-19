@@ -1,0 +1,15 @@
+#parentdiv2
+{
+    width: 325px;
+    border-style: solid;
+    border-color: transparent;
+    margin: auto;
+    padding: 10px;
+    line-height: 1.6;
+}
+
+#addBtn
+{
+    float: right;
+    background-color: khaki;
+}

@@ -1,0 +1,24 @@
+
+<div id="newTask">
+New Task - User {{userData.name}} 
+
+<div id="addDiv">
+    <form #addTaskF="ngForm" (ngSubmit)="addTask(addTaskF.form.valid, userData._id!)">
+        Title : <input type="text" #title="ngModel" name="title" [(ngModel)]="newTask.title"> <br> <br>
+        <input id="cancel" type="button" value="cancel" (click)="goBack()">
+        <input id="add" type="submit" value="Add">
+    </form>
+</div>
+
+<br>
+
+<br>
+
+    <div>
+        <span>Posts - User {{userData.name}}</span> <input type="button" value="Add" id="addBtn">
+    </div>
+
+    <div id="postComp">
+        <app-main-post [userPosts]='userData.posts!'></app-main-post>
+    </div>
+</div>

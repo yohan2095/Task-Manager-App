@@ -1,0 +1,14 @@
+#left
+{
+    position: relative;
+    right: 15%;
+}
+
+
+
+#right
+{
+    position: relative;
+    left: 15%;
+    bottom: 660px;
+}

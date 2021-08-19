@@ -1,0 +1,10 @@
+<div id="taskComp">
+    <div id="taskDiv">
+        Title : {{task.title}}  <br>
+        Completed : {{task.completed}}
+        <span *ngIf="task.completed == false">
+            <input type="button" id="marking" value="Mark Completed" (click)="markCompleted(task._id!)">
+        </span>
+    </div>
+</div>
+

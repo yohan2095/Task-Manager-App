@@ -1,0 +1,16 @@
+<div id="parentdiv">
+    <div id="searchbar">
+    Search <input input="text" [(ngModel)]="findUser">
+    <input type="button" value="Add" id="yellowbutton" (click)="gotoNewUser()"> <br>
+    </div>
+
+    <div id="childiv" *ngFor="let usr of users" >
+        <app-users-comp [userid]="usr._id!"   *ngIf="search(usr)" ></app-users-comp> <br>
+    </div>
+
+
+    
+</div>
+
+
+
