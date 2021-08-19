@@ -1,8 +1,8 @@
 import { Component, Input, OnInit, Output } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { User } from 'src/app/user';
-import { UtilsService } from '../utils.service';
-import { MemoryService } from 'src/app/memory.service';
+import { User } from 'src/app/classes/user';
+import { UtilsService } from '../../Utils/utils.service';
+import { MemoryService } from 'src/app/Utils/memory.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -53,6 +53,7 @@ export class Parent2Component implements OnInit {
       this.router.navigate(['/addPost/' + this.userData._id]);
   }
 
+  //Get user by id
   getUserData(id: string)
   {
     this.sub = this.srv.getUser(id).subscribe(data => this.userData = data);

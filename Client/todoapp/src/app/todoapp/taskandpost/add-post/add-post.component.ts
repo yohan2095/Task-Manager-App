@@ -1,10 +1,10 @@
 import { Component, OnInit, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { MemoryService } from 'src/app/memory.service';
-import { Post } from 'src/app/post';
-import { User } from 'src/app/user';
-import { UtilsService } from '../../utils.service';
+import { MemoryService } from 'src/app/Utils/memory.service';
+import { Post } from 'src/app/classes/post';
+import { User } from 'src/app/classes/user';
+import { UtilsService } from '../../../Utils/utils.service';
 
 @Component({
   selector: 'app-add-post',
@@ -34,6 +34,7 @@ export class AddPostComponent implements OnInit {
     })
   }
 
+  //Posting a new post according to the user ID
   addPost(isValid : Boolean, userid : String)
   {
     if(isValid == true)
@@ -51,6 +52,7 @@ export class AddPostComponent implements OnInit {
     this.goBack()
   }
 
+  //Get user data by ID
   getUserData(id: string)
   {
     this.sub = this.srv.getUser(id).subscribe(data => this.userData = data);

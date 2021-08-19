@@ -1,14 +1,15 @@
 #left
 {
-    position: relative;
-    right: 15%;
+    position: absolute;
+    width: 400px;
+    left: 15%;
 }
 
 
 
 #right
 {
-    position: relative;
-    left: 15%;
-    bottom: 660px;
+    position: absolute;
+    width: 400px;
+    right: 15%;
 }

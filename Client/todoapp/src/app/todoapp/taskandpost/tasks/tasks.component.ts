@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { MemoryService } from 'src/app/memory.service';
-import { Task } from 'src/app/task';
+import { MemoryService } from 'src/app/Utils/memory.service';
+import { Task } from 'src/app/classes/task';
 
 @Component({
   selector: 'app-tasks',
@@ -20,6 +20,7 @@ export class TasksComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  //If activated, changes task.completed to true and updates it on the DB
   markCompleted(taskid : String)
   {
     this.task.completed = true;

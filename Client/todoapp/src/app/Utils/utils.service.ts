@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { User } from '../user';
-import { Task } from '../task';
+import { User } from '../classes/user';
+import { Task } from '../classes/task';
 
 @Injectable({
   providedIn: 'root'

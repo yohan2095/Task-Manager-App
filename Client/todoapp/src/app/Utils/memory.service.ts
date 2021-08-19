@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { User } from './user';
-import { Task } from './task';
-import { Post } from './post';
+import { User } from '../classes/user';
+import { Task } from '../classes/task';
+import { Post } from '../classes/post';
 
 @Injectable({
   providedIn: 'root'

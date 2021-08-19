@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { MemoryService } from 'src/app/memory.service';
-import { User } from 'src/app/user';
-import { UtilsService } from '../utils.service';
+import { MemoryService } from 'src/app/Utils/memory.service';
+import { User } from 'src/app/classes/user';
+import { UtilsService } from '../../Utils/utils.service';
 
 @Component({
   selector: 'app-newuser',
@@ -24,16 +24,18 @@ export class NewuserComponent implements OnInit {
 
   goBack()
   {
-    this.router.navigate(['/']);
+    this.router.navigate(['']);
   }
 
-  onSubmit(f : NgForm)
+  //Post a new User and reload all the users
+  addUser(f : NgForm)
   {
     if(f.valid == true)
     {
       this.sub = this.srv.createUser(this.newUser).subscribe(data => {
         this.mmry.addUserMemory(data as User);
         this.router.navigate(['/']);
+        window.location.reload();
       })
     }
   }

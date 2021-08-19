@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { Post } from 'src/app/post';
+import { Post } from 'src/app/classes/post';
 
 @Component({
   selector: 'app-post',

@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Task } from 'src/app/task';
+import { Task } from 'src/app/classes/task';
 
 @Component({
   selector: 'app-main-task',

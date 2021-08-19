@@ -1,16 +1,9 @@
 #newPost
 {
     width: 325px;
-    position: relative;
-    left: 40%;
-    padding: 1%;
+    padding: 10%;
 }
 
-#add
-{
-    background-color: khaki;
-    float: right;
-}
 
 #addBtn
 {

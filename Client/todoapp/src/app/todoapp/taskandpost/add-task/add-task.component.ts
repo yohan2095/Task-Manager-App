@@ -1,10 +1,10 @@
 import { Component, OnInit, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { MemoryService } from 'src/app/memory.service';
-import { User } from 'src/app/user';
-import { Task } from 'src/app/task';
-import { UtilsService } from '../../utils.service';
+import { MemoryService } from 'src/app/Utils/memory.service';
+import { User } from 'src/app/classes/user';
+import { Task } from 'src/app/classes/task';
+import { UtilsService } from '../../../Utils/utils.service';
 
 @Component({
   selector: 'app-add-task',
@@ -35,6 +35,7 @@ export class AddTaskComponent implements OnInit {
     })
   }
 
+  //Posting a new task according to the user ID
   addTask(isValid : Boolean, userid : String)
   {
     if(isValid == true)
@@ -51,6 +52,7 @@ export class AddTaskComponent implements OnInit {
     this.goBack()
   }
 
+  //Get user by ID.
   getUserData(id: string)
   {
     this.sub = this.srv.getUser(id).subscribe(data => this.userData = data);

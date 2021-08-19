@@ -3,14 +3,8 @@
     border-style: solid;
     width: 325px;
     padding: 1%;
-    margin-bottom: 20px;
 }
 
-#position
-{
-    position: relative;
-    left: 40%;
-}
 
 #addBtn
 {
@@ -23,3 +17,4 @@
     background-color: khaki;
     float: right;
 }
+

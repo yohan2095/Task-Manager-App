@@ -1,10 +1,10 @@
 import { Component, Input, OnInit, Output } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { User } from 'src/app/user';
-import { MemoryService } from 'src/app/memory.service';
-import { UtilsService } from '../utils.service';
+import { User } from 'src/app/classes/user';
+import { MemoryService } from 'src/app/Utils/memory.service';
+import { UtilsService } from '../../Utils/utils.service';
 import { Router, Routes } from '@angular/router';
-import { Task } from 'src/app/task';
+import { Task } from 'src/app/classes/task';
 
 @Component({
   selector: 'app-users-comp',
@@ -45,22 +45,29 @@ export class UsersCompComponent implements OnInit {
     this.isComplete()
   }
 
+  //Delete the selected user and reloads the users
   delete()
   {
     this.sub = this.srv.deleteUser(this.userid).subscribe(status =>
        {
+         alert("Deleted");
+         this.router.navigate(['/']);
          window.location.reload();
        });
   }
 
+  //Update the seleced user and reloads.
   update()
   {
     this.sub = this.srv.updateUser(this.userid, this.user).subscribe(status =>
        {
+         alert("Updated");
+         this.router.navigate(['/']);
          window.location.reload();
        });
   }
   
+  //Find out if the selected Area is true and if it is, it routes Parent2 on the user datas
   gotoParent2()
   {
     if(this.slctdArea == false)
@@ -76,6 +83,7 @@ export class UsersCompComponent implements OnInit {
     }
   }
   
+  //Verifies if all tasks are completed and according to that returns a boolean for each user that defines its color.
   isComplete()
   {
     this.sub = this.srv.getUser(this.userid).subscribe(data => {
