@@ -1,6 +1,7 @@
 
 <div (click)="gotoParent2()" [style.backgroundColor]="slctdArea? 'orange' : 'white' " [ngStyle]="{'border-color' : isCompletes === true ? 'yellowgreen' : 'red' }"> 
 
+<!--User Data-->
 <form #f="ngForm" (ngSubmit)="update()">
     ID: {{user._id}} <br>
     Name:  <input type="text" value="{{user.name}}"  [(ngModel)]="user.name" name="uname"><br>
@@ -8,12 +9,14 @@
 
     <input type="button" value="Other Data" (mouseenter)="showOther=true" (mouseout)="showOther=false" (click)="showOtherB = !showOtherB">
 
+    <!--Other Data-->
     <div id="otherData"  *ngIf="showOther || showOtherB">
         <span>Street :   <input type="text" value="{{user.street}}" [(ngModel)]="user.street" name="ustreet"><br></span>
         <span>City :     <input type="text" value="{{user.city}}" [(ngModel)]="user.city" name="ucity"> <br></span>
         <span>Zip Code : <input type="text" value="{{user.zipcode}}" [(ngModel)]="user.zipcode" name="uzipcode"> <br></span>
     </div>
-    
+ 
+    <!--Update and Delete-->
     <input type="submit" value="Update" id="yellowbutton">
     <input type="button" value="Delete" id="yellowbutton" (click)="delete()"> 
 </form> 

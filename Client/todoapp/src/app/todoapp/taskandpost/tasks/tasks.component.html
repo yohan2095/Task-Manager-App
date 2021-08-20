@@ -1,7 +1,10 @@
 <div id="taskComp">
+    <!--Task Structure-->
     <div id="taskDiv">
         Title : {{task.title}}  <br>
         Completed : {{task.completed}}
+
+        <!--Mark Completed Button if task is false-->
         <span *ngIf="task.completed == false">
             <input type="button" id="marking" value="Mark Completed" (click)="markCompleted(task._id!)">
         </span>
