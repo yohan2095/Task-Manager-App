@@ -16,13 +16,14 @@ router.route('/:id')
         return resp.json(await userBL.getUser(id));
 })
 
+//POST
 router.route('/')
     .post(async function(req, resp){
         let obj = req.body;
         return resp.json(await userBL.addUser(obj));
     })
 
-
+//PUT
 router.route('/:id')
     .put(async function(req,resp){
         let id = req.params.id;

@@ -26,6 +26,7 @@ exports.getUser = function (id){
     })
 }
 
+//POST
 exports.addUser = function(obj){
     return new Promise((resolve, reject) =>{
         let user = new User({
@@ -47,6 +48,7 @@ exports.addUser = function(obj){
     })
 }
 
+//PUT
 exports.updateUser = function(id , obj){
     return new Promise((resolve , reject)=>{
         User.findByIdAndUpdate(id , {
@@ -65,6 +67,7 @@ exports.updateUser = function(id , obj){
     })
 }
 
+//DELETE
 exports.deleteUser = function(id){
     return new Promise((resolve , reject) => {
         User.findByIdAndDelete(id , function(err){

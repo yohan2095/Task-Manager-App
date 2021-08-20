@@ -1,5 +1,6 @@
 const User = require('../models/userModel');
 
+//POST
 exports.createPost = function(userid , postObj){
     return new Promise ((resolve , reject)=>{
         User.findById(userid , function(err, data){

@@ -1,6 +1,6 @@
 const User = require('../models/userModel');
 
-///GET TASK BY ID
+//GET TASK BY ID
 exports.getTask = function(id)
 {
     return new Promise((resolve, reject) => {
@@ -17,7 +17,7 @@ exports.getTask = function(id)
   })
 }
 
-///POST
+//POST
 exports.createTask = function(userId,taskObj){
     return new Promise((resolve,reject)=>{
         User.findById(userId , (err , data)=>{
@@ -37,7 +37,7 @@ exports.createTask = function(userId,taskObj){
     })
 }        
   
-///PUT
+//PUT
 exports.updateTask = function(taskId,obj){
     return new Promise((resolve , reject)=>{
         User.findOne({'tasks._id' : taskId} , (err, data)=>{
